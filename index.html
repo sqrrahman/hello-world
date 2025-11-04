@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <title>Books</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Optional nice font -->
+
+    <!-- Fonts (optional, for the nice title + body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Our styles -->
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+
+    <!-- Our script (cache-busted) -->
+    <script defer src="script.js?v=2"></script>
   </head>
   <body>
     <div class="page">
@@ -26,7 +31,7 @@
       <!-- BOOKS PANEL -->
       <section class="panel active" id="booksPanel">
         <div class="books-list" id="booksList">
-          <!-- JS will render sample items here -->
+          <!-- JS will render books here -->
         </div>
       </section>
 
@@ -35,7 +40,7 @@
         <p class="empty-text">No quotes yet.</p>
       </section>
 
-      <!-- Simple modal for adding book -->
+      <!-- Add Book Modal -->
       <div class="modal-backdrop" id="modalBackdrop">
         <div class="modal">
           <h2>Add a book</h2>
