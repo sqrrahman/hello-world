@@ -1,17 +1,62 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My GitHub Site</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Books</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Optional nice font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a>
-    </nav>
+    <div class="page">
+      <header class="topbar">
+        <h1 class="title">BOOKS</h1>
+      </header>
 
-    <h1>Hello from GitHub Pages 👋</h1>
-    <p>This file is in my GitHub repo.</p>
+      <div class="tabs-row">
+        <button class="tab active" data-tab="books">Books</button>
+        <button class="tab" data-tab="quotes">Quotes</button>
+        <button class="add-btn" id="addBookBtn">+ Add Book</button>
+      </div>
+
+      <!-- BOOKS PANEL -->
+      <section class="panel active" id="booksPanel">
+        <div class="books-list" id="booksList">
+          <!-- JS will render sample items here -->
+        </div>
+      </section>
+
+      <!-- QUOTES PANEL -->
+      <section class="panel" id="quotesPanel">
+        <p class="empty-text">No quotes yet.</p>
+      </section>
+
+      <!-- Simple modal for adding book -->
+      <div class="modal-backdrop" id="modalBackdrop">
+        <div class="modal">
+          <h2>Add a book</h2>
+          <label>
+            Title
+            <input type="text" id="bookTitle" placeholder="Book title" />
+          </label>
+          <label>
+            Status
+            <select id="bookStatus">
+              <option value="Reading">Reading</option>
+              <option value="Completed">Completed</option>
+              <option value="To Read">To Read</option>
+            </select>
+          </label>
+          <div class="modal-actions">
+            <button id="cancelModal" class="btn-secondary">Cancel</button>
+            <button id="saveBook" class="btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
